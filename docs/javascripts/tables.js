@@ -4,5 +4,3 @@ document$.subscribe(function() {
     new Tablesort(table)
   })
 })
-
-//David was here
