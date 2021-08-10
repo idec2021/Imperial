@@ -6,7 +6,7 @@ theme:
   favicon: img/idec-wiki-logo.png
 
   palette:
-    primary: light blue
+    primary: teal
     accent: blue
 
   features:
@@ -40,11 +40,17 @@ copyright: Copyright &copy; 2021 iDEC. CC-BY-4.0 | The International Directed Ev
 
 nav:
   - Home: index.md
-  - Team: team.md
+  - Team:
+    - Our Team: team.md
+    - Collaborators: collaborators.md
   - Project:
       - Background: project/background.md
+      - Design: project/design.md
+      - Dry Labs: project/drylabs.md
+      - Wet Labs: project/wetlabs.md
       - Results: project/results.md
   - Documentation:
       - Protocols: documentation/protocols.md
       - Lab notebook: documentation/notebook.md
+      - Resources: documentation/resources.md
   - Some useful features: useful_features.md
