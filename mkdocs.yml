@@ -53,4 +53,5 @@ nav:
       - Protocols: documentation/protocols.md
       - Lab notebook: documentation/notebook.md
       - Resources: documentation/resources.md
+      - Biosafety & Ethics: documentation/biosafety.md
   - Some useful features: useful_features.md
