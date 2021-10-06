@@ -1,3 +1,0 @@
-# Our Team
-
-Hello World!
