@@ -1,8 +1,0 @@
-document$.subscribe(function() {
-  var tables = document.querySelectorAll("article table")
-  tables.forEach(function(table) {
-    new Tablesort(table)
-  })
-})
-
-//David was here

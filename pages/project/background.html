@@ -1,0 +1,145 @@
+<head>
+  <!-- Put fonts and css links here -->
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Background</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../content/induceR-favicon-w.png">
+  
+  <!-- (Google) Fonts -->
+  <!-- Main CSS-->
+  <link href="../../styles/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Navigation menu -->
+  <div class="navbar">
+    <img id="nav-logo" src="..\..\content\induceR-favicon-w.png" alt="induceR">
+    <div class="dropdown">
+      <button class="dropbtn">Documentation
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../documentation/protocols.html">Protocols</a>
+        <a href="../documentation/labnotebook.html">Lab Notebook</a>
+        <a href="../documentation/biosafety.html">Biosafety and Ethics</a>
+        <a href="../documentation/resources.html">Resources</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Project
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="background.html">Background</a>
+        <a href="design.html">Design</a>
+        <a href="drylabs.html">Dry Labs</a>
+        <a href="wetlabs.html">Wet Labs</a>
+        <a href="results.html">Results</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">About
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../about/team.html">Our Team</a>
+        <a href="../about/collab.html">Collaborators</a>
+        <a href="../about/sponsors.html">Sponsors</a>
+      </div>
+    </div>
+
+    <a href="../../index.html">Home</a>
+  </div>
+
+  <!-- Page content -->
+
+  <div class="banner">
+    <div id="ellipse2"></div>
+    <img id="cellbulbcircle" src="..\..\content\banners\cellbulbcircle.svg" alt="cellbulbcircle">
+    <h1 class="banner-head">Background</h1>
+  </div>
+
+  <img id="el-membrane" src="..\..\content\el_membrane.svg" alt="membrane">
+
+  <a href="#arrow-down">
+    <img id="arrow-down" src="..\..\content\arrow_down.svg" alt="arrow-down">
+  </a>
+
+  <div class="main" id="main">
+    <div class="section2">
+      <div class="text" id="text-center">
+        <h2>What is quorum sensing?</h2>
+        Quorum sensing provides bacteria a way to control their gene expression patterns based on their environment.
+        It relies on the coupled action of a transcription regulator and an autoinducer (AI) synthase.
+        The AI synthase produces molecules known as acyl-homoserine lactones (AHL),
+        which are small diffusible molecules that bind to transcription regulators.
+        Due to AHLs being diffusible,
+        they can be synthesised in one bacteria but bind to a transcription regulator in another molecule.
+        Thus, based on the cell density and the concentration of AHLs produced,
+        gene expression of a microbial community can be regulated.
+      </div>
+      <div id="ellipse-mini"></div>
+      <img class="figs2" src="../../content/background/qs.svg">
+    </div>
+
+    <div class="section1">
+      <div class="text" id="text-center">
+        <h2>What are dual function transcription regulators?</h2>
+        Usually, the transcription regulators either repress or activate gene expression,
+        however some rare quorum sensing systems have dual function transcription regulators.
+        These are proteins that can either activate or repress gene expression depending on their binding state to DNA
+        <a href="">[reference]</a>
+        or, in some cases, autoinducer
+        <a href="https://pubs.acs.org/doi/10.1021/cb3006402">[reference]</a>.
+        For example,
+        EsaR/I quorum sensing system has EsaR as its dual function transcription regulator and EsaI
+        as its autoinducer synthase.
+        EsaR can act as a repressor or an activator depending on presence of the autoinducer molecules known as
+        acyl-homoserine lactones (AHL)
+        <a href="https://pubs.acs.org/doi/10.1021/acssynbio.9b00290">[reference]</a>.
+        To further complicate things,
+        The EsaR/I quorum sensing system has two promoters – P(EsaR) and P(EsaS).
+        EsaR can bind to both, if AHL is absent.
+        However, while binding to P(EsaR) will lead to gene expression repression,
+        binding to P(EsaS) will lead to activation. In turn, if AHL is present, an EsaR-AHL complex forms,
+        which can no longer bind to either promoter. Thus, opposite effects will take place.
+      </div>
+      <img class="figs2" src="../../content/background/fig2.svg">
+    </div>
+
+    <div class="section2">
+      <div class="text" id="text-center">
+        <h2>Why are they useful for Synthetic Biology?</h2>
+        Transcription factors are useful for designing genetic circuits as they allow to fine tune expression,
+        for example via using logic gates (see fig2)
+        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4571725/">[reference]</a>.
+        Dual transcription factors bring the possibility to spatially or temporally control circuits and thus
+        produce devices such as biosensors
+        <a href="https://ieeexplore.ieee.org/document/7384748">[reference]</a>.
+      </div>
+    </div>
+
+    <div class="section1x">
+      <div class="text" id="text-center">
+        <h2>Previous research applications</h2>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<a href="#">
+  <img id="back-to-top" src="../../content/back-to-top.svg">
+</a>
+
+<footer>Imperial College London iDEC 2021 Team ©</footer>

@@ -1,5 +1,0 @@
-# Resources
-
-## Databases
-
-## Software
