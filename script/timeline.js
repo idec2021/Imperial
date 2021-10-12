@@ -17,8 +17,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
 timeline.init = function () {
     for (var i in milestones) {
-        cn("date")[i].href = "#" + String(milestones[i].innerText);
-        milestones[i].setAttribute("id", String(milestones[i].innerText));
+        milestones[i].innerText = cn("date")[i].innerText;
+        cn("date")[i].href = "#" + String(cn("date")[i].innerText);
+        milestones[i].setAttribute("id", String(cn("date")[i].innerText));
+        
     }
 };
 

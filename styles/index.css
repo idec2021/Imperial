@@ -158,6 +158,7 @@ h3, h4, h5, h6, p {
   animation-iteration-count: infinite;
 }
 
+
 #cellbulbcircle {
   position: absolute;
   top: 50px;
@@ -222,7 +223,7 @@ h3, h4, h5, h6, p {
 }
 
 #arrow-down:hover, #back-to-top:hover, #evonetix:hover,
-#icl:hover, #genewiz:hover, #synbic:hover, #ah:hover, #multus:hover {
+#icl:hover, #genewiz:hover, #synbic:hover, #ah:hover, #multus:hover, .figs:hover {
   transform: scale(1.1);
 }
 
@@ -320,6 +321,7 @@ body {
   margin-top: 15%;
   margin-bottom: 15%;
   width: 70%;
+  transition: all .2s ease-in-out;
 }
 
 .figs2 {
@@ -624,13 +626,20 @@ body {
 /* Twitter feed */
 
 .twitter-timeline {
-  flex: 1;
+  grid-column: 2;
+  grid-row: auto;
 }
 
-#twitter-table {
-  display:flex;
+#miro-board {
+  grid-column: 2;
+  grid-row: auto;
+}
+
+.iwannacenter {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   width: 100%;
-  height:100%;
+  height:60%;
 }
 
 /* Tabs inside page */
@@ -836,11 +845,31 @@ article {
 
 .timeline__nav ul li a:hover {
   color: var(--red);
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .milestone {
   padding-top: 50px;
+}
+
+.sub1 {
+  color: grey;
+}
+
+.sub2 {
+  color: orange;
+}
+
+.sub3 {
+  color: green;
+}
+
+.sub4 {
+  color: purple;
+}
+
+#dogcat {
+  width: 100%;
 }
 
 #back-to-top {
@@ -849,6 +878,7 @@ article {
   right: 2.5%;
   z-index: 1000;
   transition: all .2s ease-in-out;
+  opacity: 0;
 }
 
 /* Footer styling */
