@@ -791,6 +791,11 @@ body {
   width: 100%;
   bottom: 10%;
 }
+
+.timeline__section {
+  z-index: 999;
+}
+
 article {
   position: relative;
   max-width: 980px;
