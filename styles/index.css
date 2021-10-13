@@ -340,6 +340,7 @@ body {
 .figs2 {
   display: block;
   margin: 0 auto;
+  width: 60%;
 }
 
 .lab-container {
@@ -648,11 +649,19 @@ body {
   grid-row: auto;
 }
 
+#miro {
+  margin: 0 auto;
+}
+
 .iwannacenter {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   width: 100%;
   height:60%;
+}
+
+#miro {
+  display: block;
 }
 
 /* Tabs inside page */
