@@ -76,6 +76,11 @@ h3, h4, h5, h6, p {
   text-align: center;
 }
 
+/* For other browsers not showing head properly*/
+.nobanner-head {
+  margin-top: 5%;
+}
+
 #home-qs {
   position: absolute;
   width: 40%;
@@ -85,9 +90,9 @@ h3, h4, h5, h6, p {
 }
 
 @keyframes pulse {
-  from { transform:scale(1);}
+  from { transform:scale(0.7);}
   50% {transform: scale(1.2);}
-  to {transform: scale(1);}
+  to {transform: scale(0.7);}
 }
 
 #ellipse {
@@ -100,7 +105,7 @@ h3, h4, h5, h6, p {
   background: #df6489b6;
   border: 1px dashed #000000;
   border-radius: 100%;
-  filter: blur(300px);
+  filter: blur(100px);
 
   animation-name: pulse;
   animation-duration: 2.2s;
@@ -117,7 +122,7 @@ h3, h4, h5, h6, p {
   background: #df6489;
   border: 1px dashed #000000;
   border-radius: 100%;
-  filter: blur(300px);
+  filter: blur(100px);
 
   animation-name: pulse;
   animation-duration: 2.2s;
@@ -134,7 +139,7 @@ h3, h4, h5, h6, p {
   background: #f1dd6967;
   border: 1px dashed #000000;
   border-radius: 100%;
-  filter: blur(300px);
+  filter: blur(100px);
 
   animation-name: pulse;
   animation-duration: 2.2s;
@@ -151,7 +156,7 @@ h3, h4, h5, h6, p {
   background: #44b5d87c;
   border: 1px dashed #000000;
   border-radius: 100%;
-  filter: blur(300px);
+  filter: blur(100px);
 
   animation-name: pulse;
   animation-duration: 2.2s;
@@ -198,6 +203,14 @@ h3, h4, h5, h6, p {
   top: -30%;
   display: block;
   z-index: 0;
+}
+
+#petri {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  top: 0;
+  opacity: 50%;
 }
 
 /* Element membrane */
@@ -665,6 +678,7 @@ body {
   float: left;
   height: 100%;
   margin-bottom: 10%;
+  width: 25%;
 }
 
 .tab-section {
@@ -702,13 +716,13 @@ body {
 .tabcontent {
   float: left;
   display: none;
-  width: 70%;
+  width:75%;
   border: 1px solid #ccc;
   background-color: white;
   padding: 0px 16px;
   animation: fadeEffect 0.5s;
   margin-bottom: 10%;
-  height: 437px;
+  height: 500px;
   overflow-y: scroll;
 }
 
@@ -773,14 +787,35 @@ body {
   grid-column: 1;
 }
 
+#stagefig1 {
+  grid-row: 2;
+  grid-column: 2;
+  width: 100%;
+  border-radius: 5px;
+}
+
 #stage2 {
   grid-row: 4;
   grid-column: 1;
 }
 
+#stagefig2 {
+  grid-row: 4;
+  grid-column: 2;
+  width: 100%;
+  border-radius: 5px;
+}
+
 #stage3 {
   grid-row: 6;
   grid-column: 1;
+}
+
+#stagefig3 {
+  grid-row: 6;
+  grid-column: 2;
+  width: 100%;
+  border-radius: 5px;
 }
 
 /* Lab Notebook Timeline */

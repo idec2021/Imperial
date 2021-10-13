@@ -13,7 +13,7 @@
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="../../content/induceR-favicon-w.png">
-  
+
   <!-- (Google) Fonts -->
   <!-- Main CSS-->
   <link href="../../styles/index.css" rel="stylesheet">
@@ -83,12 +83,76 @@
           <button class="tablinks" onclick="openTab(event, 'gene assembly')">Gene Assembly </button>
           <button class="tablinks" onclick="openTab(event, 'screen1')">Stage 1 Screening</button>
           <button class="tablinks" onclick="openTab(event, 'screen2')">Stage 2 Screening</button>
+          <button class="tablinks" onclick="openTab(event, 'gibson')">Library Generation By Gibson Assembly</button>
           <h2 class="tab-section">Generic protocols</h2>
           <button class="tablinks" onclick="openTab(event, 'Electrocompetent Cells')">Electrocompetent TOP10</button>
           <button class="tablinks" onclick="openTab(event, 'Electroporation')">Electroporation</button>
           <button class="tablinks" onclick="openTab(event, 'Gel Extraction')">Gel Extraction</button>
           <button class="tablinks" onclick="openTab(event, 'LB Plates')">LB Plates</button>
           <button class="tablinks" onclick="openTab(event, 'Plasmid Purification')">Plasmid Purification</button>
+        </div>
+
+        <div id="gibson" class="tabcontent">
+          <h3>DESCRIPTION:</h3>
+          This method requires an existing plasmid containing the wild-type gene of interest.
+          <h3>MATERIALS AND APPARATUS:</h3>
+          <h3>PROCEDURE:</h3>
+          1. Primer design<br><br>
+
+          • Choose target residues on the wild-type protein to mutate. The residues should be chosen with the desired
+          library in mind, for example, to generate a library of variants with different binding affinities you would
+          choose residues in the binding pocket that are likely to interact with the binding partner. The number of
+          residues chosen determines the size of the library. For site-saturation using NDT codons (12 codons), the
+          library size would be 12x where x is the number of residues targeted.<br><br>
+
+          • Determine the length of the mutagenic fragment. There should be at least 15-20 nucleotides flanking the 5’ end
+          of the first mutagenic codon and the 3’ end of the last mutagenic codon, these are the required overlaps for
+          Gibson cloning.<br><br>
+
+          • Design oligos to generate the mutagenic fragment. The oligos should face internally and have an overlap of at
+          least 20 nucleotides so that they may anneal against each other. For ordering the oligos, replace the
+          wild-type sequence with NDT on the template strand and AHN on the non-template strand.<br><br>
+
+          • Design oligo primers that will amplify the rest of the plasmid excluding the mutagenic fragment. These should
+          anneal against the 15-20 nucleotide flanking overlaps. These primers should be designed with standard PCR
+          primer rules: 15-20 nucleotides, with around 50% GC content and melting temperatures around 50-60 oC.<br><br>
+
+
+
+          2. PCR to generate the DNA fragments<br><br>
+
+          • Run a PCR reaction using Q5 Polymerase to amplify the backbone using the wild-type plasmid as template<br><br>
+
+          • Run a template-less PCR with mutagenic primers using Q5 Polymerase (replace the 1 µL of template DNA with
+          nuclease-free water).<br><br>
+
+          Table 1. Reagents required for the NEB Q5 HotStart Master Mix<br><br>
+
+          <img src="../../content/protocols/gibson assembly/fig1.jpg" width="100%">
+
+          Table 2. Thermocycling conditions to generate the mutagenic DNA fragments<br><br>
+
+          <img src="../../content/protocols/gibson assembly/fig2.jpg" width="100%">
+
+          * The annealing temperature can be calculated using the NEB Tm Calculator<br><br>
+
+          ** If the fragment is less than 1 kb, use 20 seconds for extension time<br><br>
+
+
+
+          3. Run the PCR products on a gel with a 1kb+ DNA ladder. This should confirm whether the inserts are of the
+          correct size. Follow a gel extraction protocol to purify the PCR products. This should result in one tube
+          containing the mutagenic fragment, and another tube containing the rest of the plasmid. Check the DNA
+          concentration of both tubes using a Nanodrop.<br><br>
+
+          4. Prepare reagents for Gibson assembly. The required amounts of both fragments can be calculated using the NEB
+          ligation calculator. NEB recommends that there are 0.02-0.5 pmols of each fragment for a 2-fragment assembly.
+          Mix the reagents into a tube and incubate at 50 oC for 1 hour.<br><br>
+
+          <img src="../../content/protocols/gibson assembly/fig3.jpg" width="100%">
+
+          5. Transform cells with 1 µL of the Gibson reaction. Recover in SOC for 1 hour in a shaking incubator at 37 oC.
+          Plate on agar containing suitable antibiotics and leave to grow overnight at 37 oC.<br><br>
         </div>
 
         <div id="Gel Extraction" class="tabcontent">
@@ -600,8 +664,8 @@
       </div>
 
     </div>
-    </div>
-      
+  </div>
+
 
 
 
@@ -613,4 +677,5 @@
 </a>
 
 <footer>Imperial College London iDEC 2021 Team ©</footer>
+
 </html>
