@@ -1,0 +1,99 @@
+<head>
+  <!-- Put fonts and css links here -->
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Imperial Team Wiki 2021</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../content/induceR-favicon-w.png">
+  
+  <!-- (Google) Fonts -->
+  <!-- Main CSS-->
+  <link href="../../styles/index.css" rel="stylesheet">
+
+  <script src='../../script/index.js' type="module"></script>
+
+</head>
+
+<body>
+  <!-- Navigation menu -->
+  <div class="navbar">
+    <img id="nav-logo" src="..\..\content\induceR-favicon-w.png" alt="induceR">
+    <div class="dropdown">
+      <button class="dropbtn">Documentation
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../documentation/protocols.html">Protocols</a>
+        <a href="../documentation/labnotebook.html">Lab Notebook</a>
+        <a href="../documentation/biosafety.html">Biosafety and Ethics</a>
+        <a href="../documentation/resources.html">Resources</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Project
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="background.html">Background</a>
+        <a href="design.html">Brainstorming</a>
+        <a href="drylabs.html">Dry Labs</a>
+        <a href="wetlabs.html">Wet Labs</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">About
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../about/team.html">Our Team</a>
+        <a href="../about/collab.html">Advisors</a>
+        <a href="../about/sponsors.html">Sponsors</a>
+      </div>
+    </div>
+
+    <a href="../../index.html">Home</a>
+  </div>
+
+  <div class="banner">
+    <img id="petri" src="../../content/wetlab/96wells.jpg" width="100%">
+    <h1 class="banner-head">Wet Labs</h1>
+  </div>
+
+  <img id="el-membrane" src="..\..\content\el_membrane.svg" alt="membrane">
+
+  <div class="main">
+    <div class="section1">
+      <div class="main-container">
+
+        <h3 id="stage-title1">VARIANT LIBRARY GENERATION</h3>
+        <div id="stage1">
+          In order to generate a library of variants for our target proteins, firstly the primers for the PCR step were designed to include mutations for the key residues that emerged to be involved in the active site of the enzymes from the dry lab analysis. Gibson assembly was then done to reconstitute the full library, with a fluorescent reporter in the backbone. 
+        </div>
+
+        <img id="stagefig1" src="../../content/wetlab/variant lib gen.svg">
+
+        <h3 id="stage-title2">SCREENING</h3>
+        <div id="stage2">
+          The generated variant library was transformed into competent E.coli cells and plated onto agar plates containing antibiotics for selection as well as non-cognate AHLs for inducing fluorescence. The library was also subjected to FACS analysis where cells that fluoresced above a gating threshold were sorted into individual wells of a 96 well plate and characterised under different AHL conditions (cognate and non-cognate) using a TECAN microplate reader.
+        </div>
+
+        <img id="stagefig2" src="../../content/wetlab/screening.svg">
+      </div>
+    </div>
+
+  </div>
+  Body
+</body>
+
+<a href="#">
+  <img id="back-to-top" src="../../content/back-to-top.svg">
+</a>
+
+<footer>Imperial College London iDEC 2021 Team ©</footer>

@@ -1,0 +1,145 @@
+<head>
+  <!-- Put fonts and css links here -->
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Background</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../content/induceR-favicon-w.png">
+  
+  <!-- (Google) Fonts -->
+  <!-- Main CSS-->
+  <link href="../../styles/index.css" rel="stylesheet">
+
+  <script src='../../script/index.js' type="module"></script>
+
+</head>
+
+<body>
+  <!-- Navigation menu -->
+  <div class="navbar">
+    <img id="nav-logo" src="..\..\content\induceR-favicon-w.png" alt="induceR">
+    <div class="dropdown">
+      <button class="dropbtn">Documentation
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../documentation/protocols.html">Protocols</a>
+        <a href="../documentation/labnotebook.html">Lab Notebook</a>
+        <a href="../documentation/biosafety.html">Biosafety and Ethics</a>
+        <a href="../documentation/resources.html">Resources</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Project
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="background.html">Background</a>
+        <a href="design.html">Brainstorming</a>
+        <a href="drylabs.html">Dry Labs</a>
+        <a href="wetlabs.html">Wet Labs</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">About
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../about/team.html">Our Team</a>
+        <a href="../about/collab.html">Advisors</a>
+        <a href="../about/sponsors.html">Sponsors</a>
+      </div>
+    </div>
+
+    <a href="../../index.html">Home</a>
+  </div>
+
+  <!-- Page content -->
+
+  <div class="banner">
+    <div id="ellipse2"></div>
+    <img id="cellbulbcircle" src="..\..\content\banners\cellbulbcircle.svg" alt="cellbulbcircle">
+    <h1 class="banner-head">Background</h1>
+  </div>
+
+  <img id="el-membrane" src="..\..\content\el_membrane.svg" alt="membrane">
+
+  <a href="#arrow-down">
+    <img id="arrow-down" src="..\..\content\arrow_down.svg" alt="arrow-down">
+  </a>
+
+  <div class="main" id="main">
+    <div class="section2">
+      <div class="text" id="text-center">
+        <h2>What is quorum sensing?</h2>
+        Quorum sensing provides bacteria a way to control their gene expression patterns based on their environment.
+        It relies on the coupled action of a transcription regulator and an autoinducer (AI) synthase.
+        The AI synthase produces molecules known as acyl-homoserine lactones (AHL),
+        which are small diffusible molecules that bind to transcription regulators.
+        Due to AHLs being diffusible,
+        they can be synthesised in one bacteria but bind to a transcription regulator in another molecule.
+        Thus, based on the cell density and the concentration of AHLs produced,
+        gene expression of a microbial community can be regulated.
+      </div>
+      <div id="ellipse-mini"></div>
+      <img class="figs2" src="../../content/background/qs.svg">
+    </div>
+
+    <div class="section1">
+      <div class="text" id="text-center">
+        <h2>What are dual function transcription regulators?</h2>
+        Usually, the transcription regulators either repress or activate gene expression,
+        however some rare quorum sensing systems have dual function transcription regulators.
+        These are proteins that can either activate or repress gene expression depending on their binding state to DNA
+
+        or, in some cases, autoinducer
+        <a href="https://pubs.acs.org/doi/10.1021/cb3006402">[reference]</a>.
+        For example,
+        EsaR/I quorum sensing system has EsaR as its dual function transcription regulator and EsaI
+        as its autoinducer synthase.
+        EsaR can act as a repressor or an activator depending on presence of the autoinducer molecules known as
+        acyl-homoserine lactones (AHL)
+        <a href="https://pubs.acs.org/doi/10.1021/acssynbio.9b00290">[reference]</a>.
+        To further complicate things,
+        the EsaR/I quorum sensing system has two promoters – P<sub>EsaR</sub> and P<sub>EsaS</sub>.
+        EsaR can bind to both, if AHL is absent.
+        However, while binding to P<sub>EsaR</sub> will lead to gene expression repression,
+        binding to P<sub>EsaS</sub> will lead to activation. In turn, if AHL is present, an EsaR-AHL complex forms,
+        which can no longer bind to either promoter. Thus, opposite effects will take place.
+      </div>
+      <img class="figs2" src="../../content/background/fig2.png">
+    </div>
+
+    <div class="section2">
+      <div class="text" id="text-center">
+        <h2>Why are they useful for Synthetic Biology?</h2>
+        <h4>Whole Cell Biosensors</h4>
+        Whole cell biosensors (WCB) are engineered cells that respond to external factors (e.g. light, chemicals) and express reporter genes in response. WCBs are a well-established area of synthetic biology, and WCBs have been successfully developed to detect 
+        <a href="https://pubmed.ncbi.nlm.nih.gov/22999825/">arsenic pollution in the environment</a>
+        and
+        <a href="https://pubs.acs.org/doi/abs/10.1021/acssynbio.7b00219">clinically important biomarkers</a>. <br><br>
+        Dual function transcription factors would allow increased complexity of biosensor circuits by allowing the expression of one reporter to be conversely coupled to the expression of another. This would allow the use of two different reporters for the biosensor to distinguish between molecules of interest, or for the biosensor to detect increases/decreases of the target molecule by expressing one reporter or the other. In the latter case, concentrations of the target molecule below a certain threshold could correspond to low levels of AHL and the expression of genes under P<sub>esaS</sub>, whilst concentrations above the threshold would correspond to high AHL and expression of genes under P<sub>esaR</sub>. 
+      
+        <h4>Metabolic Network Engineering</h4>
+        Metabolic engineering aims to increase yields of products from metabolic circuits by optimising the components in the metabolic pathway to minimise toxicity and burden. This allows expensive chemicals that are otherwise complex to synthesize to be produced by cells in a controllable manner,
+        <a href="https://pubmed.ncbi.nlm.nih.gov/21398484/"> such as 1-butanol</a>. <br><br>
+        The EsaR/I system was <a href="https://pubs.acs.org/doi/10.1021/acssynbio.9b00290">used by researchers in 2020</a> to create switches that could synchronise the up/down-regulation of genes used in a metabolic network, and used these switches to improve the production of 5-aminolevulinic acid (ALA) and poly-β-hydroxybutyrate (PHB) by 6- and 12-fold respectively. This can address two problems faced in metabolic engineering: dynamic regulation of essential genes and the reorientation of metabolic flux to production pathways.
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<a href="#">
+  <img id="back-to-top" src="../../content/back-to-top.svg">
+</a>
+
+<footer>Imperial College London iDEC 2021 Team ©</footer>
