@@ -612,6 +612,20 @@ body {
   margin: 0 auto;
 }
 
+.member-container-trio {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2.5%;
+  padding-right: 23.5px;
+  padding-left: 23.5px;
+  border-radius: 9px;
+}
+
+.member-container-trio img {
+  width: 25%;
+}
+
 .member-container {
   display: flex;
   width: 75%;
@@ -633,8 +647,28 @@ body {
   width: 50%;
 }
 
+.member-info-trio {
+  flex: auto;
+  margin-left: 23.5px;
+  width: 33%;
+}
+
 .member-info p, .member-info h2, .member-info h3, .member-info h4{
   text-align: left;
+}
+
+.member-info h2 {
+  font-size: 2.2em;
+}
+
+.member-info-trio p, .member-info-trio h3, .member-info-trio h4{
+  text-align: left;
+  font-size: 1em;
+}
+
+.member-info-trio h2 {
+  text-align: left;
+  font-size: 1.5em;
 }
 
 /* Twitter feed */
