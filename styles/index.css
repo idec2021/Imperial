@@ -528,8 +528,9 @@ body {
 }
 
 #text-center {
-  text-align: justify;
+  text-align: center;
   width: 70%;
+  margin: 0 auto;
 }
 
 *, *:before, *:after {
