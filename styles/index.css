@@ -383,6 +383,24 @@ body {
   background-color: var(--darkblue);
 }
 
+#fig-bg-1-w {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: white;
+}
+
+#fig-bg-2-w {
+  grid-row: 1;
+  grid-column: 2;
+  background-color: white;
+}
+
+#fig-bg-3-w {
+  grid-row: 1;
+  grid-column: 3;
+  background-color: white;
+}
+
 #evonetix{
   grid-row: 1;
   grid-column: 1;
