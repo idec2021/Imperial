@@ -73,7 +73,7 @@
 
     <div class="section1">
       <div class="main-container">
-        <h2 id="stage-title1">3D visualisation instructions</h2>
+        <h2 id="stage-title0">3D visualisation instructions</h2>
         <div id="mol-instructions">
           Use mouse to manipulate the 3D render. <br><br>
           To rotate: drag molecule to desired direction.<br><br>
@@ -83,14 +83,11 @@
 
         <div class='mol_viewer'>
           <script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
-          <div class='viewer_3Dmoljs' data-pdb='1H0M' data-backgroundcolor='0xffffff' data-style='stick'
-            data-select1='chain:A' data-style1='cartoon:color=spectrum' data-surface1='opacity:.7;color:white'
-            data-select2='chain:B' data-style2='stick' data-select3='chain:E' data-style3='cartoon:cartoon=spectrum'
-            data-select4='chain:F' data-style4='cartoon:cartoon=spectrum' data-select5='chain:G'
-            data-style5='cartoon:cartoon=spectrum' data-select6='chain:H' data-style6='cartoon:cartoon=spectrum'>
+          <div class='viewer_3Dmoljs' data-href='..\..\content\molecules\All Predicted WT EsaR.pdb'
+            data-backgroundcolor='white' data-style='cartoon:color=spectrum'>
             1H0M
           </div>
-          <h4>3D structure of TraR protein bound to autoinducer and to target DNA</h4>
+          <h4>3D structure of all E<sub>saR</sub> protein structure predictions</h4>
         </div>
       </div>
 
@@ -102,39 +99,45 @@
       <div class="main-container">
         <h3 id="stage-title1">STRUCTURE PREDICTION</h3>
         <div id="stage1">
-          We ran structure prediction of the wild type EsaR sequence on five software:
-          RaptorX (the article is mainly about template-based prediction that we didn’t use,
-          but it explains the template-free prediction as well, so might be useful for us),
-          I-TASSER, Phyre, Robetta, and AlphaFold. A template structure was needed for I-TASSER and, hence,
-          1H0M was used.<br><br>
-          Check if there were any parameters needed <br>
-          - I-TASSER needed a template<br>
-          - How many iterations<br>
-          - (1H0M was used as a template in PyMOL later to visualize the results from structure prediction)<br><br>
+          Structure prediction of E<sub>saR</sub> was conducted using
+          <a href="https://www.nature.com/articles/nprot.2012.085">RaptorX</a>,
+          <a href="https://currentprotocols.onlinelibrary.wiley.com/doi/10.1002/0471250953.bi0508s52">I-TASSER</a>,
+          <a href="https://www.nature.com/articles/nprot.2009.2">Phyre</a>, and
+          <a href="https://www.nature.com/articles/s41586-021-03819-2_reference.pdf">Alphafold</a>.
+          For I-TASSER, the EsaR homologue TraR was submitted as a template (PDB: 1H0M). After prediction, the obtained
+          conformations were aligned in PyMOL.
         </div>
 
         <img id="stagefig1" src="../../content/drylab/fig1.jpg">
 
         <h3 id="stage-title2">LIGAND DOCKING</h3>
         <div id="stage2">
-          Firstly, we conducted automated binding site prediction in ProteinsPlus,
-          while using 5 previously predicted structures.<br><br>
-          Secondly, we docked the cognate ligand N-(3-oxohexanoyl)-L-homoserine lactone within one of the 8 binding
-          sites
-          recognized by ProteinsPlus. For that, three softwares were used:
-          DockThor, SwissDock, and AAl. Also, manual docking was conducted in PyMOL. <br><br>
-          Later, PyMOL (the article goes through the dockings with PyMOL and Autodock/Vina which is similar to what we
-          did
-          with manual (PyMOL) and automated (DockThor, SwissDock) docking)
-          was used to conduct two comparisons of results from DockThor and SwissDock,
-          and manual and automated docking.<br><br>
+          <a href="https://academic.oup.com/nar/article/39/suppl_2/W270/2506492">SwissDock</a>
+          server (Swiss Institute of Bioinformatics) was used to perform molecular docking of the cognate 3OC6HSL. We
+          restricted docking to a docking box enclosing the binding pocket which was identified by the cavity-detection
+          method provided by the DoGSiteScorer tool from the ProteinsPlus server.<br><br>
+          The <a href="https://doi.org/10.1093/protein/8.2.127">LigPlot</a> tool was used to identify the interactions
+          between the ligand and the E<sub>saR</sub> predicted conformations, which were then compared to that of the
+          ligand and protein crystal structures homologous to E<sub>saR</sub>. These suitable homologous structures were
+          selected by running a BLAST search and filtering the results bound to their respective cognate ligand
+          available from the Protein Data Bank.
         </div>
+
+        <img id="stagefig2" src="../../content/drylab/lig.png">
+
+        <img id="stagefig3" src="../../content/drylab/insilico.png">
 
         <h3 id="stage-title3">MUTANT ANALYSIS</h3>
         <div id="stage3">
-          We did manual and automated protein-ligand interaction profiling in PyMOL and LigPlot, respectively. Docked
-          and
-          undocked structures were analyzed separately.
+          Python scripts were written to substitute the selected 4 residues with the 12 mutagenic NDT codons, generating
+          a total of 20,736 (12<sup>4</sup>) mutants in a combinatorial process. Scripts were also written to perform
+          single-residue mutagenesis, substituting each of the 4 residues with the 20 amino acids and generating 80 (20
+          x 4) single-mutation sequences. DNA and residue mutant sequences were generated as input to downstream
+          prediction software.<br><br>
+          AlphaFold codes were modified to read sequences stored in a .csv file instead of importing one sequence at a
+          time, hence automating and accelerating the prediction. The structures of the first 50 mutants from the
+          20,736-mutant library were predicted to study the effect of the mutation on binding sites.<br><br>
+
         </div>
       </div>
     </div>

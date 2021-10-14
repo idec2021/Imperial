@@ -70,42 +70,21 @@
 
   <div class="main">
     <div class="section1">
-      <h2>Methods</h2>
       <div class="main-container">
-        <h3 id="stage-title1">BEST MOLECULE SELECTION</h3>
+
+        <h3 id="stage-title1">VARIANT LIBRARY GENERATION</h3>
         <div id="stage1">
-          We ran structure prediction of the wild type EsaR sequence on five software:
-          RaptorX (the article is mainly about template-based prediction that we didn’t use,
-          but it explains the template-free prediction as well, so might be useful for us),
-          I-TASSER, Phyre, Robetta, and AlphaFold. A template structure was needed for I-TASSER and, hence,
-          1H0M was used.<br><br>
-          Check if there were any parameters needed <br>
-          - I-TASSER needed a template<br>
-          - How many iterations<br>
-          - (1H0M was used as a template in PyMOL later to visualize the results from structure prediction)<br><br>
+          In order to generate a library of variants for our target proteins, firstly the primers for the PCR step were designed to include mutations for the key residues that emerged to be involved in the active site of the enzymes from the dry lab analysis. Gibson assembly was then done to reconstitute the full library, with a fluorescent reporter in the backbone. 
         </div>
 
-        <h3 id="stage-title2">MUTATED GENE ASSEMBLY</h3>
+        <img id="stagefig1" src="../../content/wetlab/variant lib gen.png">
+
+        <h3 id="stage-title2">SCREENING</h3>
         <div id="stage2">
-          Firstly, we conducted automated binding site prediction in ProteinsPlus,
-          while using 5 previously predicted structures.<br>
-          Secondly, we docked the cognate ligand N-(3-oxohexanoyl)-L-homoserine lactone within one of the 8 binding
-          sites
-          recognized by ProteinsPlus. For that, three softwares were used:
-          DockThor, SwissDock, and AAl. Also, manual docking was conducted in PyMOL. <br>
-          Later, PyMOL (the article goes through the dockings with PyMOL and Autodock/Vina which is similar to what we
-          did
-          with manual (PyMOL) and automated (DockThor, SwissDock) docking)
-          was used to conduct two comparisons of results from DockThor and SwissDock,
-          and manual and automated docking.<br><br>
+          The generated variant library was transformed into competent E.coli cells and plated onto agar plates containing antibiotics for selection as well as non-cognate AHLs for inducing fluorescence. The library was also subjected to FACS analysis where cells that fluoresced above a gating threshold were sorted into individual wells of a 96 well plate and characterised under different AHL conditions (cognate and non-cognate) using a TECAN microplate reader.
         </div>
 
-        <h3 id="stage-title3">SCREENING MUTANTS</h3>
-        <div id="stage3">
-          We did manual and automated protein-ligand interaction profiling in PyMOL and LigPlot, respectively. Docked
-          and
-          undocked structures were analyzed separately.
-        </div>
+        <img id="stagefig2" src="../../content/wetlab/screening.png">
       </div>
     </div>
 

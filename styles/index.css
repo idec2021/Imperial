@@ -213,6 +213,20 @@ h3, h4, h5, h6, p {
   opacity: 50%;
 }
 
+#teamspirit {
+  position: absolute;
+  display: block;
+  z-index: 0;
+  top: 0;
+}
+
+#proto {
+  position: absolute;
+  display: block;
+  top: 0;
+  opacity: 100%;
+}
+
 /* Element membrane */
 
 #el-membrane {
@@ -809,6 +823,11 @@ body {
 }
 
 /* Labs main content distribution */
+
+#stage-title0 {
+  grid-row: 1;
+  grid-column: span 2;
+}
 
 #stage-title1 {
   grid-row: 1;
